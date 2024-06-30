@@ -21,7 +21,7 @@ header {
   background-color: lightblue;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 40px 0;
 
   nav {
     background-color: lightcoral;
@@ -105,5 +105,105 @@ header {
     background-color: lightcoral;
     margin: auto;
     width: 90%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .mobile-list {
+    display: none;
+  }
+}
+
+/* max 425 */
+
+@media only screen and (max-width: 600px) {
+  header {
+    background-color: lightgoldenrodyellow;
+    padding: 20px 0;
+
+    nav {
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 20px;
+
+      .desktop-nav {
+        display: none;
+      }
+
+      .hamburger-container {
+        background-color: lightblue;
+        display: flex;
+        align-items: center;
+
+        .hamburger-menu {
+          width: 64px;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          opacity: 1;
+          &:hover {
+            cursor: pointer;
+          }
+          background-color: lightseagreen;
+
+          span:nth-child(1) {
+            background-color: brown;
+          }
+          span:nth-child(3) {
+            background-color: rgb(223, 253, 2);
+          }
+
+          span {
+            transform: rotate(0deg);
+            display: block;
+            height: 8px;
+            background-color: white;
+            transition: 0.4s ease-in-out;
+          }
+        }
+      }
+
+      .rotated-menu {
+        width: 64px;
+        span {
+          transition: 0.4s ease-in-out;
+          display: block;
+          height: 8px;
+          background-color: white;
+        }
+        span:nth-child(1) {
+          transform: translateY(9px) rotate(135deg);
+          background-color: brown;
+        }
+        span:nth-child(2) {
+          opacity: 0;
+          transform: translateX(-60px);
+        }
+        span:nth-child(3) {
+          transform: translateY(-9px) rotate(-135deg);
+          background-color: rgb(223, 253, 2);
+        }
+      }
+
+      .mobile-list-state-1 {
+        z-index: 999;
+        position: absolute;
+        right: -200px;
+        margin-top: 100px;
+        transition: 0.4s ease-in-out;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .mobile-list {
+        z-index: 999;
+        position: fixed;
+        right: 0;
+        margin-top: 100px;
+        transition: 0.4s ease-in-out;
+        display: flex;
+        flex-direction: column;
+      }
+    }
   }
 }

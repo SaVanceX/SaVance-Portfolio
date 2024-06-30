@@ -21,23 +21,43 @@ header {
   background-color: lightblue;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 40px 0;
 
   nav {
     background-color: lightcoral;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 80%;
     display: flex;
-  }
 
-  ul {
-    background-color: lightgreen;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    a {
-      text-decoration: none;
+    .img-name-container {
+      display: flex;
+      align-items: center;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      font-weight: 700px;
+
+      p {
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+    }
+
+    .desktop-nav {
+      background-color: lightgreen;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+
+      li a {
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      a {
+        text-decoration: none;
+      }
     }
   }
 }
@@ -105,5 +125,154 @@ header {
     background-color: lightcoral;
     margin: auto;
     width: 90%;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .img-container {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-right: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .img-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-right: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .hamburger-container,
+  .mobile-list,
+  .mobile-list-state-1,
+  .mobile-list-state-2 {
+    display: none;
+  }
+}
+
+/* max 425 */
+
+@media only screen and (max-width: 600px) {
+  header {
+    background-color: lightgoldenrodyellow;
+    padding: 20px 0;
+
+    nav {
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 20px;
+
+      .desktop-nav {
+        display: none;
+      }
+
+      .hamburger-container {
+        background-color: lightblue;
+        display: flex;
+        align-items: center;
+
+        .hamburger-menu {
+          width: 40px;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          opacity: 1;
+          &:hover {
+            cursor: pointer;
+          }
+          background-color: lightseagreen;
+
+          span:nth-child(1) {
+            background-color: brown;
+          }
+          span:nth-child(3) {
+            background-color: rgb(223, 253, 2);
+          }
+
+          span {
+            transform: rotate(0deg);
+            display: block;
+            height: 4px;
+            background-color: white;
+            transition: 0.4s ease-in-out;
+          }
+        }
+      }
+
+      .rotated-menu {
+        width: 40px;
+        &:hover {
+          cursor: pointer;
+        }
+        span {
+          transition: 0.4s ease-in-out;
+          display: block;
+          height: 4px;
+          background-color: white;
+        }
+        span:nth-child(1) {
+          transform: translateY(0px) rotate(135deg);
+          background-color: brown;
+        }
+        span:nth-child(2) {
+          opacity: 0;
+          transform: translateX(-60px);
+        }
+        span:nth-child(3) {
+          transform: translateY(-9px) rotate(-135deg);
+          background-color: rgb(223, 253, 2);
+        }
+      }
+
+      .mobile-list {
+        padding: 0;
+        z-index: 999;
+        position: fixed;
+        margin-top: 84px;
+        transition: 0.4s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+
+        li {
+          padding: 20px 0;
+          a {
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .mobile-list-state-1 {
+        right: -200px;
+        width: 0%;
+      }
+
+      .mobile-list-state-2 {
+        right: 0;
+        width: 100%;
+      }
+    }
   }
 }

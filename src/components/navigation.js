@@ -6,9 +6,9 @@ export function Navigation() {
 
   return (
     <nav>
-      <div>
-        <div>
-          <img src='' alt='' />
+      <div className='img-name-container'>
+        <div className='img-container'>
+          <img src='/images/profile.jpeg' alt='' />
         </div>
         <p>SaVance Ford</p>
       </div>
@@ -22,7 +22,7 @@ export function Navigation() {
       </ul>
       <div className='hamburger-container'>
         <div
-          className={isMenuOpen ? 'rotated-menu' : 'hamburger-menu'}
+          className={!isMenuOpen ? ' hamburger-menu' : 'rotated-menu'}
           onClick={() => setMenuOpen(!isMenuOpen)}
         >
           <span></span>
@@ -30,12 +30,22 @@ export function Navigation() {
           <span></span>
         </div>
       </div>
-      <ul className={isMenuOpen ? 'mobile-list' : 'mobile-list-state-1'}>
+      <ul
+        className={
+          !isMenuOpen
+            ? 'mobile-list mobile-list-state-1'
+            : 'mobile-list mobile-list-state-2'
+        }
+      >
         <li>
-          <Link to='/'>Home</Link>
+          <Link to='/' onClick={() => setMenuOpen(!isMenuOpen)}>
+            Home
+          </Link>
         </li>
         <li>
-          <Link to='/experience'>Experience</Link>
+          <Link to='/experience' onClick={() => setMenuOpen(!isMenuOpen)}>
+            Experience
+          </Link>
         </li>
       </ul>
     </nav>

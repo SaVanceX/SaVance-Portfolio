@@ -68,6 +68,19 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .hero-content {
+    h1 {
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 2.25rem;
+      margin-bottom: 16px;
+      background-color: lightskyblue;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
 }
 
 #about {
@@ -81,7 +94,6 @@ header {
 
     .blurb {
       background-color: lightgreen;
-
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -94,6 +106,31 @@ header {
       .about-text {
         background-color: lightgray;
         width: 50%;
+
+        p {
+          text-align: left;
+          line-height: 1.5;
+        }
+      }
+    }
+
+    .skills-content {
+      .skill-grid {
+        display: grid;
+        grid-template-columns: [first] 1fr [second] 1fr [third] 1fr;
+        column-gap: 10px;
+        row-gap: 10px;
+        /* grid-template-rows: [row1-start] 20% [row1-end]; */
+      }
+
+      .skill {
+        text-align: center;
+        font-weight: 600;
+        border-radius: 5px;
+        font-size: 1rem;
+        padding: 10px 8px;
+        color: #727272;
+        background-color: rgb(176, 176, 176);
       }
     }
   }
@@ -168,8 +205,6 @@ header {
     display: none;
   }
 }
-
-/* max 425 */
 
 @media only screen and (max-width: 600px) {
   header {
@@ -272,6 +307,49 @@ header {
       .mobile-list-state-2 {
         right: 0;
         width: 100%;
+      }
+    }
+  }
+
+  .hero {
+    height: 64vh;
+    .hero-content {
+      padding: 0 20px;
+    }
+  }
+
+  .about-container {
+    .blurb {
+      margin-bottom: 60px;
+
+      h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+      }
+
+      p {
+        text-align: center;
+        font-size: 1.25rem;
+        line-height: 1.5;
+      }
+    }
+
+    .about-content {
+      flex-direction: column;
+
+      .about-text {
+        width: 100% !important;
+        margin-bottom: 60px;
+
+        h3 {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .skills-content {
+      h3 {
+        margin-bottom: 20px;
       }
     }
   }

@@ -68,6 +68,19 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .hero-content {
+    h1 {
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 2.25rem;
+      margin-bottom: 16px;
+      background-color: lightskyblue;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
 }
 
 #about {
@@ -81,10 +94,13 @@ header {
 
     .blurb {
       background-color: lightgreen;
-
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-bottom: 60px;
+      h2 {
+        margin-bottom: 20px;
+      }
     }
 
     .about-content {
@@ -94,6 +110,37 @@ header {
       .about-text {
         background-color: lightgray;
         width: 50%;
+
+        h3 {
+          margin-bottom: 20px;
+        }
+
+        p {
+          line-height: 1.7;
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .skills-content {
+      h3 {
+        margin-bottom: 20px;
+      }
+
+      .skill-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .skill {
+        text-align: center;
+        font-weight: 600;
+        border-radius: 5px;
+        font-size: 1rem;
+        padding: 10px 8px;
+        color: #727272;
+        background-color: rgb(176, 176, 176);
       }
     }
   }
@@ -125,6 +172,17 @@ header {
     background-color: lightcoral;
     margin: auto;
     width: 90%;
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .contact-content {
+      span {
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-right: 8px;
+      }
+    }
   }
 }
 
@@ -142,6 +200,17 @@ header {
       object-fit: cover;
     }
   }
+
+  .about-content {
+    p {
+      padding-right: 60px;
+    }
+  }
+
+  .contact-content {
+    width: 50%;
+    margin: auto;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -158,6 +227,42 @@ header {
       object-fit: cover;
     }
   }
+
+  .about-container {
+    .blurb {
+      margin-bottom: 60px;
+
+      h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+      }
+
+      p {
+        text-align: center;
+        font-size: 1.25rem;
+        line-height: 1.5;
+      }
+    }
+
+    .about-content {
+      flex-direction: column;
+
+      .about-text {
+        width: 100% !important;
+        margin-bottom: 60px;
+
+        h3 {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .skills-content {
+      h3 {
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -167,9 +272,14 @@ header {
   .mobile-list-state-2 {
     display: none;
   }
-}
 
-/* max 425 */
+  .blurb {
+    p {
+      text-align: center;
+      width: 50%;
+    }
+  }
+}
 
 @media only screen and (max-width: 600px) {
   header {
@@ -273,6 +383,13 @@ header {
         right: 0;
         width: 100%;
       }
+    }
+  }
+
+  .hero {
+    height: 64vh;
+    .hero-content {
+      padding: 0 20px;
     }
   }
 }

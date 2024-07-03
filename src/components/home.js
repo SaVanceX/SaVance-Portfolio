@@ -1,11 +1,13 @@
 import { Contact } from './contact';
-
+import { Skill } from './skill';
 export function Home() {
   return (
     <>
       <section className='hero'>
-        <h1>Hello Im SaVance!</h1>
-        <p>I love to leaarn, Code and create Digital Art!</p>
+        <div className='hero-content'>
+          <h1>Hello Im SaVance!</h1>
+          <p>I love to learn, Code and create Digital Art!</p>
+        </div>
       </section>
 
       <section id='about'>
@@ -19,7 +21,7 @@ export function Home() {
           </div>
           <div className='about-content'>
             <div className='about-text'>
-              <p>Get to know me!</p>
+              <h3>Get to know me!</h3>
               <p>
                 Experienced Front-End Developer with over 5 years of expertise
                 in delivering innovative web solutions for various
@@ -29,11 +31,15 @@ export function Home() {
                 communication skills to excel in a Front-End Developer role
               </p>
             </div>
-            <div>
-              <p>My Skills</p>
-              <div>
-                <span>skill 1</span>
-                <span>skill 2</span>
+            <div className='skills-content'>
+              <h3>My Skills</h3>
+              <div className='skill-grid'>
+                <Skill skill={'HTML'} />
+                <Skill skill={'CSS'} />
+                <Skill skill={'JavaScript'} />
+                <Skill skill={'GIT'} />
+                <Skill skill={'ReactJS'} />
+                <Skill skill={'CMS'} />
               </div>
             </div>
           </div>

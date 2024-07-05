@@ -5,7 +5,7 @@ export function Home() {
     <>
       <section className='hero'>
         <div className='hero-content'>
-          <h1>Hello Im SaVance!</h1>
+          <h1>Hello, Im SaVance!</h1>
           <p>I love to learn, Code and create Digital Art!</p>
         </div>
       </section>
@@ -40,6 +40,9 @@ export function Home() {
                 <Skill skill={'GIT'} />
                 <Skill skill={'ReactJS'} />
                 <Skill skill={'CMS'} />
+                <Skill skill={'SEO'} />
+                <Skill skill={'Responsive Design'} />
+                <Skill skill={'Github'} />
               </div>
             </div>
           </div>

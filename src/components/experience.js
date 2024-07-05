@@ -6,6 +6,7 @@ export function Experience() {
   return (
     <>
       <section id='experience'>
+        <h1>Experience</h1>
         {workdData.map((item) => experienceBlock(item))}
       </section>
     </>

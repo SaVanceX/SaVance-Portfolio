@@ -7,7 +7,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+html {
+  font-size: 62.5%;
   box-sizing: border-box;
 }
 
@@ -32,12 +33,10 @@ header {
     .img-name-container {
       display: flex;
       align-items: center;
-      font-size: 1.8rem;
-      text-transform: uppercase;
-      font-weight: 700px;
 
       p {
-        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-size: 1.8rem;
         font-weight: 700;
       }
     }
@@ -50,7 +49,7 @@ header {
       gap: 40px;
 
       li a {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         font-weight: 700;
         text-transform: uppercase;
       }
@@ -73,12 +72,13 @@ header {
     h1 {
       text-transform: uppercase;
       font-weight: 800;
-      font-size: 2.25rem;
+      font-size: 6rem;
       margin-bottom: 16px;
+      letter-spacing: 3px;
       background-color: lightskyblue;
     }
     p {
-      font-size: 1rem;
+      font-size: 2.2rem;
     }
   }
 }
@@ -98,8 +98,17 @@ header {
       flex-direction: column;
       align-items: center;
       margin-bottom: 60px;
+      text-align: center;
+      font-size: 2rem;
+      line-height: 1.6;
+
       h2 {
+        font-size: 4rem;
         margin-bottom: 20px;
+      }
+
+      p {
+        width: 50%;
       }
     }
 
@@ -112,18 +121,20 @@ header {
         width: 50%;
 
         h3 {
+          font-size: 2.8rem;
           margin-bottom: 20px;
         }
 
         p {
           line-height: 1.7;
-          font-size: 1.2rem;
+          font-size: 1.8rem;
         }
       }
     }
 
     .skills-content {
       h3 {
+        font-size: 2.8rem;
         margin-bottom: 20px;
       }
 
@@ -137,7 +148,7 @@ header {
         text-align: center;
         font-weight: 600;
         border-radius: 5px;
-        font-size: 1rem;
+        font-size: 1.6rem;
         padding: 10px 8px;
         color: #727272;
         background-color: rgb(176, 176, 176);
@@ -151,17 +162,25 @@ header {
 #experience {
   background-color: lightcoral;
   height: 100vh;
-  padding: 300px 0;
+  padding: 200px 0;
+
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    text-align: center;
+  }
 
   .experience-block {
     background-color: lightskyblue;
-    width: 80%;
+    width: 90%;
     margin: auto;
     display: flex;
   }
 }
 
-/* Contact */
+/* ----------------- Contact */
+
 #contact {
   background-color: lightslategrey;
   display: flex;
@@ -173,16 +192,57 @@ header {
     margin: auto;
     width: 90%;
     h2 {
+      text-transform: uppercase;
+      font-size: 4rem;
       text-align: center;
       margin-bottom: 20px;
     }
     .contact-content {
+      p {
+        font-size: 1.8rem;
+        line-height: 1.7;
+      }
       span {
         text-transform: uppercase;
         font-weight: 600;
         margin-right: 8px;
       }
     }
+  }
+}
+
+/* ----------------- Experience */
+.experience-block {
+  .work-date {
+    line-height: 1.2;
+    padding: 20px;
+
+    .title {
+      font-size: 2.4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .job {
+      font-size: 2rem;
+    }
+    .year {
+      font-size: 1.2rem;
+    }
+  }
+  .work-text {
+    padding: 20px;
+    background-color: lightgreen;
+    font-size: 1.8rem;
+    line-height: 1.7;
+  }
+}
+/* -------- BREAKPOINTS ------------- */
+
+/* --------- 1200 */
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 59%;
   }
 }
 
@@ -213,7 +273,13 @@ header {
   }
 }
 
+/* --------- 900 */
+
 @media only screen and (max-width: 900px) {
+  html {
+    font-size: 56%;
+  }
+
   .img-container {
     width: 50px;
     height: 50px;
@@ -231,17 +297,6 @@ header {
   .about-container {
     .blurb {
       margin-bottom: 60px;
-
-      h2 {
-        font-size: 1.6rem;
-        margin-bottom: 20px;
-      }
-
-      p {
-        text-align: center;
-        font-size: 1.25rem;
-        line-height: 1.5;
-      }
     }
 
     .about-content {
@@ -271,13 +326,6 @@ header {
   .mobile-list-state-1,
   .mobile-list-state-2 {
     display: none;
-  }
-
-  .blurb {
-    p {
-      text-align: center;
-      width: 50%;
-    }
   }
 }
 
@@ -361,13 +409,16 @@ header {
         transition: 0.4s ease-in-out;
         display: flex;
         flex-direction: column;
-        align-items: center;
         list-style: none;
 
         li {
-          padding: 20px 0;
+          text-align: right;
+          padding: 20px 24px;
+          border-bottom: 1px solid #eee;
+          width: 100%;
+
           a {
-            font-size: 24px;
+            font-size: 1.6rem;
             font-weight: 700;
             text-decoration: none;
           }
@@ -380,7 +431,7 @@ header {
       }
 
       .mobile-list-state-2 {
-        right: 0;
+        right: 46px;
         width: 100%;
       }
     }
@@ -390,6 +441,44 @@ header {
     height: 64vh;
     .hero-content {
       padding: 0 20px;
+
+      h1 {
+        font-size: 4.5rem;
+      }
+      p {
+        font-size: 2rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  #about {
+    h3 {
+      font-size: 2.4rem !important;
+    }
+
+    .blurb {
+      p {
+        text-align: left;
+        font-size: 1.8rem;
+        width: 100% !important;
+      }
+    }
+  }
+
+  .experience-block {
+    flex-wrap: wrap;
+
+    .work-date {
+      padding-bottom: 0;
+      margin-bottom: 20px;
+      .title {
+        font-size: 2.4rem;
+      }
+    }
+
+    .work-text {
+      padding-top: 0;
     }
   }
 }

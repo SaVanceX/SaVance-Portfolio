@@ -2,10 +2,9 @@ export function experienceBlock(item) {
   return (
     <div key={item.id} className='experience-block'>
       <div className='work-date'>
-        <p>{item.title}</p>
-        <p>
-          {item.job} <span>{item.year}</span>
-        </p>
+        <p className='title'>{item.title}</p>
+        <p className='job'>{item.job}</p>
+        <p className='year'>{item.year}</p>
       </div>
       <div className='work-text'>
         <p>{item.text}</p>

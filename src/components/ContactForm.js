@@ -53,7 +53,9 @@ const ContactForm = () => {
         <textarea name='message' />
       </div>
 
-      <input type='submit' value='Send' disabled={isSubmitting} />
+      <button type='submit' value='Send' disabled={isSubmitting}>
+        Submit
+      </button>
       {stateMessage && <p>{stateMessage}</p>}
     </form>
   );

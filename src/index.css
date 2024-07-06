@@ -186,8 +186,7 @@ header {
 
   .contact-info {
     background-color: lightcoral;
-    margin: auto;
-    width: 90%;
+
     h2 {
       text-transform: uppercase;
       font-size: 4rem;
@@ -196,14 +195,28 @@ header {
     }
     .contact-form {
       background-color: lightgreen;
-      padding: 64px;
-      width: 60%;
       margin: auto;
+      padding: 32px;
+
       form {
         display: flex;
         flex-direction: column;
 
-        .form-label {
+        .form-field {
+          .form-label {
+            display: block;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: left;
+          }
+
+          input {
+            width: 100%;
+            /* padding: 32px; */
+            font-size: 1.6rem;
+          }
         }
       }
     }
@@ -478,6 +491,12 @@ header {
 
     .work-text {
       padding-top: 0;
+    }
+  }
+
+  .contact-form {
+    width: 70%;
+    .form-field {
     }
   }
 }

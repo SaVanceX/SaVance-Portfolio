@@ -40,12 +40,19 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={sendEmail}>
-      <label className='form-label'>Name</label>
-      <input type='text' name='user_name' />
-      <label className='form-label'>Email</label>
-      <input type='email' name='user_email' />
-      <label className='form-label'>Message</label>
-      <textarea name='message' />
+      <div className='form-field'>
+        <label className='form-label'>Name</label>
+        <input type='text' name='user_name' />
+      </div>
+      <div className='form-field'>
+        <label className='form-label'>Email</label>
+        <input type='email' name='user_email' />
+      </div>
+      <div className='form-field'>
+        <label className='form-label'>Message</label>
+        <textarea name='message' />
+      </div>
+
       <input type='submit' value='Send' disabled={isSubmitting} />
       {stateMessage && <p>{stateMessage}</p>}
     </form>

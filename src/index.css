@@ -183,10 +183,9 @@ header {
 
 #contact {
   background-color: lightslategrey;
+  height: 70vh;
 
   .contact-info {
-    background-color: lightcoral;
-
     h2 {
       text-transform: uppercase;
       font-size: 4rem;
@@ -244,6 +243,47 @@ header {
   }
 }
 
+footer {
+  height: 20vh;
+  background-color: lightblue;
+
+  .footer-content {
+    background-color: lightcoral;
+    .name-blurb {
+      background-color: cadetblue;
+      width: 40%;
+      h2 {
+        font-size: 2.2rem;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 1.5rem;
+        line-height: 1.7;
+      }
+    }
+
+    .socials {
+      background-color: bisque;
+      width: 20%;
+      p {
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      ul {
+        background-color: chocolate;
+      }
+    }
+  }
+
+  .copyright {
+    background-color: violet;
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
+
 /* ----------------- Experience */
 .experience-block {
   .work-date {
@@ -269,6 +309,7 @@ header {
     line-height: 1.7;
   }
 }
+
 /* -------- BREAKPOINTS ------------- */
 
 /* --------- 1200 */

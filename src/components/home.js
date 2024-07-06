@@ -1,4 +1,3 @@
-import ContactForm from './ContactForm';
 import { Contact } from './contact';
 import { Skill } from './skill';
 export function Home() {

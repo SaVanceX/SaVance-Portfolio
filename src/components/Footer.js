@@ -15,14 +15,31 @@ const Footer = () => {
         <div className='socials'>
           <p>Social</p>
           <ul>
-            <li>LinkedIn</li>
-            <li>Github</li>
+            <li>
+              <a
+                href='https://www.linkedin.com/in/savance-ford/'
+                target='_blank'
+              >
+                <img
+                  className='footer-icon'
+                  src='/images/linkedin.png'
+                  alt=''
+                />
+              </a>
+            </li>
+            <li>
+              <a href='https://github.com/SaVanceX' target='_blank'>
+                {' '}
+                <img className='footer-icon' src='/images/github.png' alt='' />
+              </a>
+            </li>
           </ul>
         </div>
       </div>
       <div className='copyright'>
         <p>
-          © Copyright 2024 . Made by <Link to='/'>SaVance Ford</Link>
+          © Copyright 2024 . Made by{' '}
+          <Link to='https://savancex.netlify.app/'>SaVance Ford</Link>
         </p>
       </div>
     </footer>

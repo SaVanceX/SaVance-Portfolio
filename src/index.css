@@ -272,6 +272,10 @@ footer {
       }
       ul {
         background-color: chocolate;
+        list-style: none;
+        .footer-icon {
+          width: 20px;
+        }
       }
     }
   }

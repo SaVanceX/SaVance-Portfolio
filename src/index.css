@@ -183,9 +183,6 @@ header {
 
 #contact {
   background-color: lightslategrey;
-  display: flex;
-
-  height: 20vh;
 
   .contact-info {
     background-color: lightcoral;
@@ -197,15 +194,17 @@ header {
       text-align: center;
       margin-bottom: 20px;
     }
-    .contact-content {
-      p {
-        font-size: 1.8rem;
-        line-height: 1.7;
-      }
-      span {
-        text-transform: uppercase;
-        font-weight: 600;
-        margin-right: 8px;
+    .contact-form {
+      background-color: lightgreen;
+      padding: 64px;
+      width: 60%;
+      margin: auto;
+      form {
+        display: flex;
+        flex-direction: column;
+
+        .form-label {
+        }
       }
     }
   }

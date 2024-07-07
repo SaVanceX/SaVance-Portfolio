@@ -10,6 +10,11 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  color: #231f20;
+}
+
+body {
+  background-color: #8df9e6;
 }
 
 /* Navigation */
@@ -19,13 +24,11 @@ header {
   width: 100%;
   z-index: 999;
   height: 64px;
-  background-color: lightblue;
   display: flex;
   justify-content: center;
   padding: 40px 0;
 
   nav {
-    background-color: lightcoral;
     justify-content: space-between;
     width: 80%;
     display: flex;
@@ -42,7 +45,6 @@ header {
     }
 
     .desktop-nav {
-      background-color: lightgreen;
       list-style: none;
       display: flex;
       align-items: center;
@@ -57,12 +59,16 @@ header {
       a {
         text-decoration: none;
       }
+
+      a:visited {
+        text-decoration: none;
+        color: #231f20;
+      }
     }
   }
 }
 
 .hero {
-  background-color: lightcoral;
   height: 80vh;
   display: flex;
   justify-content: center;
@@ -75,7 +81,6 @@ header {
       font-size: 6rem;
       margin-bottom: 16px;
       letter-spacing: 3px;
-      background-color: lightskyblue;
     }
     p {
       font-size: 2.2rem;
@@ -84,16 +89,13 @@ header {
 }
 
 #about {
-  background-color: lightblue;
   padding: 100px 0;
 
   .about-container {
-    background-color: lightcoral;
     width: 90%;
     margin: auto;
 
     .blurb {
-      background-color: lightgreen;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -113,11 +115,9 @@ header {
     }
 
     .about-content {
-      background-color: lightseagreen;
       display: flex;
 
       .about-text {
-        background-color: lightgray;
         width: 50%;
 
         h3 {
@@ -151,7 +151,6 @@ header {
         font-size: 1.6rem;
         padding: 10px 8px;
         color: #727272;
-        background-color: rgb(176, 176, 176);
       }
     }
   }
@@ -182,7 +181,6 @@ header {
 /* ----------------- Contact */
 
 #contact {
-  background-color: lightslategrey;
   height: 70vh;
 
   .contact-info {
@@ -193,7 +191,6 @@ header {
       margin-bottom: 64px;
     }
     .contact-form {
-      background-color: lightgreen;
       margin: auto;
       padding: 32px;
 
@@ -244,10 +241,7 @@ header {
 }
 
 footer {
-  background-color: lightblue;
-
   .footer-content {
-    background-color: lightcoral;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -255,7 +249,6 @@ footer {
     padding: 40px 0;
 
     .name-blurb {
-      background-color: cadetblue;
       width: 60%;
       margin-bottom: 32px;
       h2 {
@@ -271,7 +264,6 @@ footer {
     }
 
     .socials {
-      background-color: bisque;
       width: 20%;
       p {
         font-size: 2.2rem;
@@ -283,7 +275,6 @@ footer {
         li {
           margin-right: 8px;
         }
-        background-color: chocolate;
         list-style: none;
         display: flex;
         padding-left: 0;
@@ -295,7 +286,6 @@ footer {
   }
 
   .copyright {
-    background-color: violet;
     margin: auto;
     width: 90%;
     text-align: center;
@@ -432,11 +422,11 @@ footer {
 
 @media only screen and (max-width: 600px) {
   header {
-    background-color: lightgoldenrodyellow;
     padding: 20px 0;
 
     nav {
-      width: 100%;
+      width: 81%;
+      border: solid #231f20 2px;
       justify-content: space-between;
       padding: 0 20px;
 
@@ -445,7 +435,6 @@ footer {
       }
 
       .hamburger-container {
-        background-color: lightblue;
         display: flex;
         align-items: center;
 
@@ -458,20 +447,19 @@ footer {
           &:hover {
             cursor: pointer;
           }
-          background-color: lightseagreen;
 
           span:nth-child(1) {
-            background-color: brown;
+            background-color: #231f20;
           }
           span:nth-child(3) {
-            background-color: rgb(223, 253, 2);
+            background-color: #231f20;
           }
 
           span {
             transform: rotate(0deg);
             display: block;
             height: 4px;
-            background-color: white;
+            background-color: #231f20;
             transition: 0.4s ease-in-out;
           }
         }
@@ -486,11 +474,11 @@ footer {
           transition: 0.4s ease-in-out;
           display: block;
           height: 4px;
-          background-color: white;
+          background-color: #231f20;
         }
         span:nth-child(1) {
           transform: translateY(0px) rotate(135deg);
-          background-color: brown;
+          background-color: #231f20;
         }
         span:nth-child(2) {
           opacity: 0;
@@ -498,7 +486,7 @@ footer {
         }
         span:nth-child(3) {
           transform: translateY(-9px) rotate(-135deg);
-          background-color: rgb(223, 253, 2);
+          background-color: #231f20;
         }
       }
 
@@ -506,22 +494,28 @@ footer {
         padding: 0;
         z-index: 999;
         position: fixed;
-        margin-top: 84px;
+        margin-top: 80px;
         transition: 0.4s ease-in-out;
         display: flex;
         flex-direction: column;
         list-style: none;
 
         li {
-          text-align: right;
-          padding: 20px 24px;
-          border-bottom: 1px solid #eee;
+          text-align: center;
+          padding: 20px 0px;
           width: 100%;
+          border-bottom: 2px solid #231f20;
+          background-color: #8df9e6;
 
           a {
             font-size: 1.6rem;
             font-weight: 700;
             text-decoration: none;
+          }
+
+          a:visited {
+            text-decoration: none;
+            color: #231f20;
           }
         }
       }
@@ -529,10 +523,11 @@ footer {
       .mobile-list-state-1 {
         right: -200px;
         width: 0%;
+        opacity: 0;
       }
 
       .mobile-list-state-2 {
-        right: 46px;
+        right: 0px;
         width: 100%;
       }
     }

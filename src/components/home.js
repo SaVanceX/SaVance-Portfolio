@@ -3,7 +3,7 @@ import { Skill } from './skill';
 export function Home() {
   return (
     <>
-      <section className='hero'>
+      <section id='hero'>
         <div className='hero-content'>
           <h1>Hello, Im SaVance!</h1>
           <p>I love to learn, Code and create Digital Art!</p>

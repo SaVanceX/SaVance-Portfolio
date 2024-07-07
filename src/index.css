@@ -7,9 +7,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  --sea-foam: #8df9e6;
+  --black: #231f20;
+}
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  color: var(--black);
+}
+
+body {
+  background-color: var(--sea-foam);
 }
 
 /* Navigation */
@@ -19,16 +29,17 @@ header {
   width: 100%;
   z-index: 999;
   height: 64px;
-  background-color: lightblue;
   display: flex;
   justify-content: center;
   padding: 40px 0;
 
   nav {
-    background-color: lightcoral;
     justify-content: space-between;
     width: 80%;
     display: flex;
+    border: solid var(--black) 2px;
+    padding: 50px 20px;
+    background-color: var(--sea-foam);
 
     .img-name-container {
       display: flex;
@@ -42,7 +53,6 @@ header {
     }
 
     .desktop-nav {
-      background-color: lightgreen;
       list-style: none;
       display: flex;
       align-items: center;
@@ -57,16 +67,21 @@ header {
       a {
         text-decoration: none;
       }
+
+      a:visited {
+        text-decoration: none;
+        color: #231f20;
+      }
     }
   }
 }
 
-.hero {
-  background-color: lightcoral;
-  height: 80vh;
+#hero {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: var(--black) solid 2px;
 
   .hero-content {
     h1 {
@@ -75,7 +90,6 @@ header {
       font-size: 6rem;
       margin-bottom: 16px;
       letter-spacing: 3px;
-      background-color: lightskyblue;
     }
     p {
       font-size: 2.2rem;
@@ -84,23 +98,21 @@ header {
 }
 
 #about {
-  background-color: lightblue;
   padding: 100px 0;
+  border-bottom: var(--black) solid 2px;
 
   .about-container {
-    background-color: lightcoral;
     width: 90%;
     margin: auto;
 
     .blurb {
-      background-color: lightgreen;
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-bottom: 60px;
       text-align: center;
       font-size: 2rem;
-      line-height: 1.6;
+      line-height: 1.5;
 
       h2 {
         font-size: 4rem;
@@ -113,11 +125,9 @@ header {
     }
 
     .about-content {
-      background-color: lightseagreen;
       display: flex;
 
       .about-text {
-        background-color: lightgray;
         width: 50%;
 
         h3 {
@@ -126,8 +136,8 @@ header {
         }
 
         p {
-          line-height: 1.7;
           font-size: 1.8rem;
+          line-height: 1.7;
         }
       }
     }
@@ -150,8 +160,8 @@ header {
         border-radius: 5px;
         font-size: 1.6rem;
         padding: 10px 8px;
-        color: #727272;
-        background-color: rgb(176, 176, 176);
+        background-color: var(--black);
+        color: var(--sea-foam);
       }
     }
   }
@@ -160,8 +170,7 @@ header {
 /* Experience */
 
 #experience {
-  background-color: lightcoral;
-  height: 100vh;
+  background-color: var(--sea-foam);
   padding: 200px 0;
 
   h1 {
@@ -172,19 +181,49 @@ header {
   }
 
   .experience-block {
-    background-color: lightskyblue;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background-color: var(--black);
+    color: var(--sea-foam);
     width: 90%;
     margin: auto;
     display: flex;
+    margin-bottom: 40px;
+    padding: 20px;
+
+    .work-date {
+      line-height: 1.2;
+      padding: 20px;
+
+      .title {
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .job {
+        font-size: 2rem;
+        margin-bottom: 8px;
+      }
+      .year {
+        font-size: 1.2rem;
+      }
+    }
+    .work-text {
+      padding: 20px;
+      font-size: 1.8rem;
+      line-height: 1.7;
+    }
   }
 }
 
 /* ----------------- Contact */
 
 #contact {
-  background-color: lightslategrey;
+  padding-top: 64px;
   height: 70vh;
-
+  background-color: var(--black);
+  color: var(--sea-foam);
+  border-bottom: var(--sea-foam) solid 2px;
   .contact-info {
     h2 {
       text-transform: uppercase;
@@ -193,7 +232,6 @@ header {
       margin-bottom: 64px;
     }
     .contact-form {
-      background-color: lightgreen;
       margin: auto;
       padding: 32px;
 
@@ -236,6 +274,10 @@ header {
             padding: 0;
             height: 60px;
             width: 50%;
+            background-color: var(--sea-foam);
+            color: var(--black);
+            text-transform: uppercase;
+            font-weight: 700;
           }
         }
       }
@@ -244,10 +286,10 @@ header {
 }
 
 footer {
-  background-color: lightblue;
-
+  background-color: var(--black);
+  color: var(--sea-foam);
+  padding-top: 50px;
   .footer-content {
-    background-color: lightcoral;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -255,7 +297,6 @@ footer {
     padding: 40px 0;
 
     .name-blurb {
-      background-color: cadetblue;
       width: 60%;
       margin-bottom: 32px;
       h2 {
@@ -271,7 +312,6 @@ footer {
     }
 
     .socials {
-      background-color: bisque;
       width: 20%;
       p {
         font-size: 2.2rem;
@@ -283,7 +323,6 @@ footer {
         li {
           margin-right: 8px;
         }
-        background-color: chocolate;
         list-style: none;
         display: flex;
         padding-left: 0;
@@ -295,7 +334,6 @@ footer {
   }
 
   .copyright {
-    background-color: violet;
     margin: auto;
     width: 90%;
     text-align: center;
@@ -303,32 +341,12 @@ footer {
     p {
       font-size: 1.2rem;
     }
-  }
-}
-
-/* ----------------- Experience */
-.experience-block {
-  .work-date {
-    line-height: 1.2;
-    padding: 20px;
-
-    .title {
-      font-size: 2.4rem;
-      font-weight: 700;
-      text-transform: uppercase;
+    a {
+      text-decoration: none;
     }
-    .job {
-      font-size: 2rem;
+    a:visited {
+      color: var(--sea-foam);
     }
-    .year {
-      font-size: 1.2rem;
-    }
-  }
-  .work-text {
-    padding: 20px;
-    background-color: lightgreen;
-    font-size: 1.8rem;
-    line-height: 1.7;
   }
 }
 
@@ -342,7 +360,7 @@ footer {
   }
 }
 
-@media only screen and (min-width: 901px) {
+@media only screen and (min-width: 900px) {
   .img-container {
     width: 80px;
     height: 80px;
@@ -416,6 +434,7 @@ footer {
   }
 }
 
+/* ------- 600 ------------- */
 @media only screen and (min-width: 600px) {
   .hamburger-container,
   .mobile-list,
@@ -428,24 +447,28 @@ footer {
     width: 500px;
     padding: 64px;
   }
+
+  .experience-block {
+    max-width: 800px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   header {
-    background-color: lightgoldenrodyellow;
     padding: 20px 0;
 
     nav {
-      width: 100%;
+      width: 81%;
+      border: solid #231f20 2px;
       justify-content: space-between;
       padding: 0 20px;
+      background-color: var(--sea-foam);
 
       .desktop-nav {
         display: none;
       }
 
       .hamburger-container {
-        background-color: lightblue;
         display: flex;
         align-items: center;
 
@@ -458,20 +481,19 @@ footer {
           &:hover {
             cursor: pointer;
           }
-          background-color: lightseagreen;
 
           span:nth-child(1) {
-            background-color: brown;
+            background-color: #231f20;
           }
           span:nth-child(3) {
-            background-color: rgb(223, 253, 2);
+            background-color: #231f20;
           }
 
           span {
             transform: rotate(0deg);
             display: block;
             height: 4px;
-            background-color: white;
+            background-color: #231f20;
             transition: 0.4s ease-in-out;
           }
         }
@@ -486,11 +508,11 @@ footer {
           transition: 0.4s ease-in-out;
           display: block;
           height: 4px;
-          background-color: white;
+          background-color: #231f20;
         }
         span:nth-child(1) {
           transform: translateY(0px) rotate(135deg);
-          background-color: brown;
+          background-color: #231f20;
         }
         span:nth-child(2) {
           opacity: 0;
@@ -498,7 +520,7 @@ footer {
         }
         span:nth-child(3) {
           transform: translateY(-9px) rotate(-135deg);
-          background-color: rgb(223, 253, 2);
+          background-color: #231f20;
         }
       }
 
@@ -506,22 +528,28 @@ footer {
         padding: 0;
         z-index: 999;
         position: fixed;
-        margin-top: 84px;
+        margin-top: 80px;
         transition: 0.4s ease-in-out;
         display: flex;
         flex-direction: column;
         list-style: none;
 
         li {
-          text-align: right;
-          padding: 20px 24px;
-          border-bottom: 1px solid #eee;
+          text-align: center;
+          padding: 20px 0px;
           width: 100%;
+          border-bottom: 2px solid #231f20;
+          background-color: #8df9e6;
 
           a {
             font-size: 1.6rem;
             font-weight: 700;
             text-decoration: none;
+          }
+
+          a:visited {
+            text-decoration: none;
+            color: #231f20;
           }
         }
       }
@@ -529,10 +557,11 @@ footer {
       .mobile-list-state-1 {
         right: -200px;
         width: 0%;
+        opacity: 0;
       }
 
       .mobile-list-state-2 {
-        right: 46px;
+        right: 0px;
         width: 100%;
       }
     }
@@ -569,16 +598,18 @@ footer {
 
   .experience-block {
     flex-wrap: wrap;
+    padding: 8px !important;
 
     .work-date {
       padding-bottom: 0;
-      margin-bottom: 20px;
       .title {
         font-size: 2.4rem;
       }
     }
 
     .work-text {
+      border-top: var(--sea-foam) solid 2px;
+
       padding-top: 0;
     }
   }

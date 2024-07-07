@@ -170,8 +170,7 @@ header {
 /* Experience */
 
 #experience {
-  background-color: lightcoral;
-  height: 100vh;
+  background-color: var(--sea-foam);
   padding: 200px 0;
 
   h1 {
@@ -182,10 +181,38 @@ header {
   }
 
   .experience-block {
-    background-color: lightskyblue;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background-color: var(--black);
+    color: var(--sea-foam);
     width: 90%;
     margin: auto;
     display: flex;
+    margin-bottom: 40px;
+    padding: 20px;
+
+    .work-date {
+      line-height: 1.2;
+      padding: 20px;
+
+      .title {
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .job {
+        font-size: 2rem;
+        margin-bottom: 8px;
+      }
+      .year {
+        font-size: 1.2rem;
+      }
+    }
+    .work-text {
+      padding: 20px;
+      font-size: 1.8rem;
+      line-height: 1.7;
+    }
   }
 }
 
@@ -323,32 +350,6 @@ footer {
   }
 }
 
-/* ----------------- Experience */
-.experience-block {
-  .work-date {
-    line-height: 1.2;
-    padding: 20px;
-
-    .title {
-      font-size: 2.4rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    .job {
-      font-size: 2rem;
-    }
-    .year {
-      font-size: 1.2rem;
-    }
-  }
-  .work-text {
-    padding: 20px;
-    background-color: lightgreen;
-    font-size: 1.8rem;
-    line-height: 1.7;
-  }
-}
-
 /* -------- BREAKPOINTS ------------- */
 
 /* --------- 1200 */
@@ -433,6 +434,7 @@ footer {
   }
 }
 
+/* ------- 600 ------------- */
 @media only screen and (min-width: 600px) {
   .hamburger-container,
   .mobile-list,
@@ -444,6 +446,10 @@ footer {
   .contact-form {
     width: 500px;
     padding: 64px;
+  }
+
+  .experience-block {
+    max-width: 800px;
   }
 }
 
@@ -592,16 +598,18 @@ footer {
 
   .experience-block {
     flex-wrap: wrap;
+    padding: 8px !important;
 
     .work-date {
       padding-bottom: 0;
-      margin-bottom: 20px;
       .title {
         font-size: 2.4rem;
       }
     }
 
     .work-text {
+      border-top: var(--sea-foam) solid 2px;
+
       padding-top: 0;
     }
   }

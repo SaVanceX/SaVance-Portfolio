@@ -183,10 +183,9 @@ header {
 
 #contact {
   background-color: lightslategrey;
+  height: 70vh;
 
   .contact-info {
-    background-color: lightcoral;
-
     h2 {
       text-transform: uppercase;
       font-size: 4rem;
@@ -244,6 +243,69 @@ header {
   }
 }
 
+footer {
+  background-color: lightblue;
+
+  .footer-content {
+    background-color: lightcoral;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 40px 0;
+
+    .name-blurb {
+      background-color: cadetblue;
+      width: 60%;
+      margin-bottom: 32px;
+      h2 {
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 1.5rem;
+        line-height: 1.7;
+        width: 80%;
+      }
+    }
+
+    .socials {
+      background-color: bisque;
+      width: 20%;
+      p {
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      ul {
+        li {
+          margin-right: 8px;
+        }
+        background-color: chocolate;
+        list-style: none;
+        display: flex;
+        padding-left: 0;
+        .footer-icon {
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    background-color: violet;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    padding: 20px 0;
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
+
 /* ----------------- Experience */
 .experience-block {
   .work-date {
@@ -269,6 +331,7 @@ header {
     line-height: 1.7;
   }
 }
+
 /* -------- BREAKPOINTS ------------- */
 
 /* --------- 1200 */
@@ -522,6 +585,16 @@ header {
 
   .contact-form {
     width: 70%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    .name-blurb {
+      width: 100% !important;
+    }
+    .socials {
+      width: 100% !important;
+    }
   }
 }
 

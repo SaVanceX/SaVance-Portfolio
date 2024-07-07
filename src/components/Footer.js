@@ -9,7 +9,7 @@ const Footer = () => {
           <p>
             A Frontend focused Web Developer building the Frontend of Websites
             and Web Applications that leads to the success of the overall
-            product
+            product.
           </p>
         </div>
         <div className='socials'>
@@ -19,6 +19,7 @@ const Footer = () => {
               <a
                 href='https://www.linkedin.com/in/savance-ford/'
                 target='_blank'
+                rel='noreferrer'
               >
                 <img
                   className='footer-icon'
@@ -28,7 +29,11 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href='https://github.com/SaVanceX' target='_blank'>
+              <a
+                href='https://github.com/SaVanceX'
+                target='_blank'
+                rel='noreferrer'
+              >
                 {' '}
                 <img className='footer-icon' src='/images/github.png' alt='' />
               </a>

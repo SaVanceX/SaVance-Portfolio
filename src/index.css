@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -20,6 +24,10 @@ html {
 
 body {
   background-color: var(--sea-foam);
+}
+
+.container {
+  @apply w-full max-w-3xl p-5 mx-auto;
 }
 
 /* Navigation */

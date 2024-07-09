@@ -12,13 +12,12 @@
 }
 
 html {
-  font-size: 62.5%;
+  @apply text-[62.5%] lg:text-[56%] xl:text-[59%];
   box-sizing: border-box;
-  color: var(--black);
 }
 
 body {
-  @apply bg-sea-foam;
+  @apply bg-sea-foam text-chalk-black;
 }
 
 .container {
@@ -47,42 +46,26 @@ header {
     }
 
     .desktop-nav {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      gap: 40px;
+      @apply flex items-center gap-[40px] no-underline;
 
       li a {
-        font-size: 1.6rem;
-        font-weight: 700;
-        text-transform: uppercase;
+        @apply text-[1.6rem] font-bold uppercase;
       }
-
-      a {
-        text-decoration: none;
-      }
-
+      a,
       a:visited {
         text-decoration: none;
-        color: #231f20;
       }
     }
   }
 }
 
 #hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: var(--black) solid 2px;
+  @apply h-screen flex justify-center items-center border-chalk-black border-b-2;
 
   .hero-content {
+    width: 80%;
     h1 {
-      text-transform: uppercase;
-      font-weight: 800;
-      font-size: 6rem;
-      margin-bottom: 16px;
+      @apply uppercase font-extrabold text-[5rem] mb-[16px];
       letter-spacing: 3px;
     }
     p {
@@ -346,12 +329,6 @@ footer {
 
 /* --------- 1200 */
 
-@media screen and (max-width: 1200px) {
-  html {
-    font-size: 59%;
-  }
-}
-
 @media only screen and (min-width: 900px) {
   .img-container {
     width: 80px;
@@ -382,10 +359,6 @@ footer {
 /* --------- 900 */
 
 @media only screen and (max-width: 900px) {
-  html {
-    font-size: 56%;
-  }
-
   .img-container {
     width: 50px;
     height: 50px;

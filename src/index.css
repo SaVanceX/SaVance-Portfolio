@@ -75,43 +75,29 @@ header {
 }
 
 #about {
-  padding: 100px 0;
-  border-bottom: var(--black) solid 2px;
+  @apply py-[100px] border-chalk-black border-b-2;
 
   .about-container {
-    width: 90%;
-    margin: auto;
+    @apply w-[90%] m-auto;
 
     .blurb {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 60px;
-      text-align: center;
-      font-size: 2rem;
-      line-height: 1.5;
+      @apply flex flex-col items-center mb-[60px] text-left text-[2rem] sm:text-center sm:text-[1.8rem];
 
       h2 {
-        font-size: 4rem;
-        margin-bottom: 20px;
+        @apply text-[4rem] mb-[20px];
       }
-
       p {
-        width: 50%;
+        @apply leading-[1.7] w-full sm:w-[50%];
       }
     }
 
     .about-content {
       display: flex;
-
       .about-text {
         width: 50%;
-
         h3 {
-          font-size: 2.8rem;
-          margin-bottom: 20px;
+          @apply text-[2.8rem] mb-[20px];
         }
-
         p {
           font-size: 1.8rem;
           line-height: 1.7;
@@ -121,24 +107,15 @@ header {
 
     .skills-content {
       h3 {
-        font-size: 2.8rem;
-        margin-bottom: 20px;
+        @apply text-[2.4rem] sm:text-[2.8rem] mb-[20px];
       }
 
       .skill-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
+        @apply flex flex-wrap gap-[10px];
       }
 
       .skill {
-        text-align: center;
-        font-weight: 600;
-        border-radius: 5px;
-        font-size: 1.6rem;
-        padding: 10px 8px;
-        background-color: var(--black);
-        color: var(--sea-foam);
+        @apply text-center font-semibold text-[1.6rem] py-[10px] px-[8px] bg-chalk-black text-sea-foam;
       }
     }
   }
@@ -344,12 +321,6 @@ footer {
     }
   }
 
-  .about-content {
-    p {
-      padding-right: 60px;
-    }
-  }
-
   .contact-content {
     width: 50%;
     margin: auto;
@@ -406,11 +377,6 @@ footer {
   .mobile-list-state-1,
   .mobile-list-state-2 {
     display: none;
-  }
-
-  .contact-form {
-    width: 500px;
-    padding: 64px;
   }
 
   .experience-block {
@@ -535,21 +501,6 @@ footer {
       p {
         font-size: 2rem;
         line-height: 1.5;
-      }
-    }
-  }
-
-  #about {
-    h3 {
-      font-size: 2.4rem !important;
-    }
-
-    .blurb {
-      p {
-        text-align: left;
-        font-size: 1.8rem;
-        line-height: 1.7;
-        width: 100% !important;
       }
     }
   }

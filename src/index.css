@@ -173,111 +173,40 @@ header {
 /* ----------------- Contact */
 
 #contact {
-  padding-top: 64px;
-  height: 70vh;
-  background-color: var(--black);
-  color: var(--sea-foam);
-  border-bottom: var(--sea-foam) solid 2px;
+  @apply pt-[64px] h-[70vh] bg-chalk-black text-sea-foam border-b-2 border-sea-foam;
   .contact-info {
     h2 {
-      text-transform: uppercase;
-      font-size: 4rem;
-      text-align: center;
-      margin-bottom: 64px;
-    }
-    .contact-form {
-      margin: auto;
-      padding: 32px;
-
-      form {
-        display: flex;
-        flex-direction: column;
-
-        .form-field {
-          margin-bottom: 20px;
-          .form-label {
-            display: block;
-            font-size: 1.4rem;
-            letter-spacing: 1px;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-align: left;
-          }
-
-          input {
-            padding: 0;
-            border: 0;
-            width: 100%;
-            height: 50px;
-            font-size: 1.6rem;
-          }
-
-          textarea {
-            padding: 0;
-            border: 0;
-            width: 100%;
-            height: 100px;
-            font-size: 1.6rem;
-          }
-        }
-        .submit-button {
-          display: flex;
-          justify-content: flex-end;
-          button {
-            border: 0;
-            padding: 0;
-            height: 60px;
-            width: 50%;
-            background-color: var(--sea-foam);
-            color: var(--black);
-            text-transform: uppercase;
-            font-weight: 700;
-          }
-        }
-      }
+      @apply text-sea-foam uppercase text-[4rem] text-center mb-[64px];
     }
   }
 }
 
 footer {
-  background-color: var(--black);
-  color: var(--sea-foam);
-  padding-top: 50px;
+  @apply bg-chalk-black text-sea-foam pt-[50px];
   .footer-content {
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    padding: 40px 0;
+    @apply m-auto flex flex-col sm:flex-row justify-between w-[90%] py-[40px] px-0;
 
     .name-blurb {
-      width: 60%;
-      margin-bottom: 32px;
+      @apply text-sea-foam w-full sm:w-[60%] mb-[32px];
+
       h2 {
-        @apply nav-font;
-        margin-bottom: 20px;
+        @apply nav-font mb-[20px];
       }
       p {
-        font-size: 1.5rem;
-        line-height: 1.7;
-        width: 80%;
+        @apply text-[1.5rem] leading-[1.7] w-[80%];
       }
     }
 
     .socials {
-      width: 20%;
+      @apply w-full sm:w-[20%];
       p {
-        @apply nav-font;
-        font-weight: 600;
-        margin-bottom: 20px;
+        @apply nav-font font-semibold mb-[20px];
       }
       ul {
+        @apply flex pl-0 list-none;
         li {
           margin-right: 8px;
         }
-        list-style: none;
-        display: flex;
-        padding-left: 0;
         .footer-icon {
           width: 20px;
         }
@@ -286,18 +215,14 @@ footer {
   }
 
   .copyright {
-    margin: auto;
-    width: 90%;
-    text-align: center;
-    padding: 20px 0;
+    @apply m-auto w-[90%] text-center py-[20px] px-0;
     p {
       font-size: 1.2rem;
     }
-    a {
-      text-decoration: none;
-    }
+
+    a,
     a:visited {
-      color: var(--sea-foam);
+      @apply no-underline text-sea-foam;
     }
   }
 }
@@ -490,21 +415,6 @@ footer {
     }
   }
 
-  .hero {
-    height: 64vh;
-    .hero-content {
-      padding: 0 20px;
-
-      h1 {
-        font-size: 4.5rem;
-      }
-      p {
-        font-size: 2rem;
-        line-height: 1.5;
-      }
-    }
-  }
-
   .experience-block {
     flex-wrap: wrap;
     padding: 8px !important;
@@ -520,28 +430,6 @@ footer {
       border-top: var(--sea-foam) solid 2px;
 
       padding-top: 0;
-    }
-  }
-
-  .contact-form {
-    width: 70%;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    .name-blurb {
-      width: 100% !important;
-    }
-    .socials {
-      width: 100% !important;
-    }
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  .submit-button {
-    button {
-      width: 100% !important;
     }
   }
 }

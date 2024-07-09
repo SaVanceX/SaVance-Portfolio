@@ -11,11 +11,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-:root {
-  --sea-foam: #8df9e6;
-  --black: #231f20;
-}
-
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -23,40 +18,31 @@ html {
 }
 
 body {
-  background-color: var(--sea-foam);
+  @apply bg-sea-foam;
 }
 
 .container {
   @apply w-full max-w-3xl p-5 mx-auto;
 }
 
+/* fonts */
+
+.nav-font {
+  @apply uppercase text-[1.8rem];
+}
 /* Navigation */
 
 header {
-  position: fixed;
-  width: 100%;
+  @apply fixed w-full flex justify-center h-[110px] py-[40px];
   z-index: 999;
-  height: 64px;
-  display: flex;
-  justify-content: center;
-  padding: 40px 0;
 
   nav {
-    justify-content: space-between;
-    width: 80%;
-    display: flex;
-    border: solid var(--black) 2px;
-    padding: 50px 20px;
-    background-color: var(--sea-foam);
+    @apply flex justify-between w-[90%] px-[20px] py-[40px] sm:w-[80%] sm:p-[50px] bg-sea-foam border-2 border-chalk-black border-solid;
 
     .img-name-container {
-      display: flex;
-      align-items: center;
-
+      @apply flex items-center;
       p {
-        text-transform: uppercase;
-        font-size: 1.8rem;
-        font-weight: 700;
+        @apply nav-font font-bold;
       }
     }
 
@@ -308,8 +294,7 @@ footer {
       width: 60%;
       margin-bottom: 32px;
       h2 {
-        font-size: 2.2rem;
-        text-transform: uppercase;
+        @apply nav-font;
         margin-bottom: 20px;
       }
       p {
@@ -322,8 +307,7 @@ footer {
     .socials {
       width: 20%;
       p {
-        font-size: 2.2rem;
-        text-transform: uppercase;
+        @apply nav-font;
         font-weight: 600;
         margin-bottom: 20px;
       }
@@ -466,12 +450,6 @@ footer {
     padding: 20px 0;
 
     nav {
-      width: 81%;
-      border: solid #231f20 2px;
-      justify-content: space-between;
-      padding: 0 20px;
-      background-color: var(--sea-foam);
-
       .desktop-nav {
         display: none;
       }
@@ -550,13 +528,11 @@ footer {
           background-color: #8df9e6;
 
           a {
-            font-size: 1.6rem;
-            font-weight: 700;
-            text-decoration: none;
+            @apply text-[1.6rem] font-bold no-underline;
           }
 
           a:visited {
-            text-decoration: none;
+            @apply no-underline;
             color: #231f20;
           }
         }
@@ -599,6 +575,7 @@ footer {
       p {
         text-align: left;
         font-size: 1.8rem;
+        line-height: 1.7;
         width: 100% !important;
       }
     }

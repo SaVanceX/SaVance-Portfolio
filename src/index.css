@@ -38,11 +38,10 @@ header {
   padding: 40px 0;
 
   nav {
-    justify-content: space-between;
+    @apply justify-between py-[40px] px-[20px] sm:py-[50px] sm:px-[20px];
     width: 80%;
     display: flex;
     border: solid var(--black) 2px;
-    padding: 50px 20px;
     background-color: var(--sea-foam);
 
     .img-name-container {
@@ -464,8 +463,6 @@ footer {
     nav {
       width: 81%;
       border: solid #231f20 2px;
-      justify-content: space-between;
-      padding: 0 20px;
       background-color: var(--sea-foam);
 
       .desktop-nav {

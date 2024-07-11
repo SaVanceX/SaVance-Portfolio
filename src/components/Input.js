@@ -24,12 +24,12 @@ export const Input = ({
   const isInvalid = isFormInvalid(inputError);
 
   const input_tailwind =
-    'p-5 font-medium rounded-md w-full border border-slate-300 placeholder:opacity-60';
+    'p-5 text-chalk-black font-medium  w-full border placeholder:opacity-60';
 
   return (
     <div className={cn('flex flex-col w-full gap-2', className)}>
       <div className='flex justify-between'>
-        <label htmlFor={id} className='font-semibold capitalize'>
+        <label htmlFor={id} className='font-semibold text-[1.5rem] capitalize'>
           {label}
         </label>
         <AnimatePresence mode='wait' initial={false}>

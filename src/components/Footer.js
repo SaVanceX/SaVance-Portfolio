@@ -5,7 +5,7 @@ const Footer = () => {
     <footer id='footer'>
       <div className='footer-content'>
         <div className='name-blurb'>
-          <h2>SaVance Ford</h2>
+          <h2>SaVance X</h2>
           <p>
             A Frontend focused Web Developer building the Frontend of Websites
             and Web Applications that leads to the success of the overall

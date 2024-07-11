@@ -29,8 +29,9 @@ export const Form = () => {
       .then(
         (result) => {
           setStateMessage('Message sent!');
+          setIsSubmitting(false);
           setTimeout(() => {
-            setIsSubmitting(false);
+            setStateMessage(null);
           }, 5000); // hide message after 5 seconds
         },
         (error) => {

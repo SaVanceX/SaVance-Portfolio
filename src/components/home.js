@@ -1,21 +1,24 @@
 import { Contact } from './contact';
 import { Skill } from './skill';
+import { useEffect } from 'react';
 
 export function Home() {
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries
-      .filter((e) => {
-        console.log(e);
-        return e.isIntersecting;
-      })
-      .forEach((entry) => {
-        entry.target.classList.add('scrolled');
-        observer.unobserve(entry.target);
-      });
-  });
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries
+        .filter((e) => {
+          console.log(e);
+          return e.isIntersecting;
+        })
+        .forEach((entry) => {
+          entry.target.classList.add('scrolled');
+          observer.unobserve(entry.target);
+        });
+    });
 
-  document.querySelectorAll('section').forEach((e) => {
-    observer.observe(e);
+    document.querySelectorAll('section').forEach((e) => {
+      observer.observe(e);
+    });
   });
 
   return (

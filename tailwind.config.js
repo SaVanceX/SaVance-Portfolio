@@ -9,5 +9,6 @@ export default {
       },
     },
   },
+  purge: ['./src/components/**/*.{js,jsx}', './public/index.html'],
   plugins: [],
 };

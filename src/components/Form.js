@@ -1,8 +1,7 @@
 import { Input } from './Input';
+import emailjs from '@emailjs/browser';
 import { useForm, FormProvider } from 'react-hook-form';
-import { useState } from 'react';
-import { GrMail } from 'react-icons/gr';
-import { BsFillCheckSquareFill } from 'react-icons/bs';
+import { useState, useRef } from 'react';
 import {
   desc_validation,
   name_validation,
@@ -10,37 +9,65 @@ import {
 } from '../utils/inputValidation';
 export const Form = () => {
   const methods = useForm();
-  const [success, setSuccess] = useState(false);
+  const formRef = useRef();
 
-  const onSubmit = methods.handleSubmit((data) => {
-    console.log(data);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [stateMessage, setStateMessage] = useState(null);
+
+  const onSubmit = methods.handleSubmit((e) => {
+    console.log(e);
+    setIsSubmitting(true);
+    emailjs
+      .sendForm(
+        'service_ba3rdvd', // service id
+        'template_xhzsd92', // template id
+        formRef.current,
+        {
+          publicKey: 'Z62uCpJieU87vIBMd',
+        } // publick key
+      )
+      .then(
+        (result) => {
+          setStateMessage('Message sent!');
+          setIsSubmitting(false);
+          setTimeout(() => {
+            setStateMessage(null);
+          }, 5000); // hide message after 5 seconds
+        },
+        (error) => {
+          console.log(error);
+          setStateMessage('Something went wrong, please try again later');
+          setIsSubmitting(false);
+          setTimeout(() => {
+            setStateMessage(null);
+          }, 5000); // hide message after 5 seconds
+        }
+      );
+
+    // Clears the form after sending the email
     methods.reset();
-    setSuccess(true);
   });
 
   return (
     <FormProvider {...methods}>
       <form
+        ref={formRef}
         onSubmit={(e) => e.preventDefault()}
         noValidate
-        className='container'
+        className='container w-[90%] sm:w-[600px]'
       >
-        <div className='grid gap-5 md:grid-cols-2'>
+        <div className='grid gap-10 md:grid-cols-2'>
           <Input {...name_validation} />
           <Input {...email_validation} />
           <Input {...desc_validation} className='md:col-span-2' />
         </div>
         <div className='mt-5'>
-          {success && (
-            <p className='flex items-center gap-1 mb-5 font-semibold text-green-500'>
-              <BsFillCheckSquareFill /> Form has been submitted successfully
-            </p>
-          )}
+          {stateMessage && <p>{stateMessage}</p>}
           <button
             onClick={onSubmit}
-            className='flex items-center gap-1 p-5 font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-800'
+            className='flex items-center gap-1 p-5 text-chalk-black bg-sea-foam hover:bg-blue-800'
+            disabled={isSubmitting}
           >
-            <GrMail />
             Submit Form
           </button>
         </div>

@@ -5,7 +5,9 @@ export function Contact() {
       <section className='' id='contact'>
         <div className='contact-info'>
           <h2>Contact</h2>
-          <Form />
+          <div className='w-[100%] flex justify-center'>
+            <Form />
+          </div>
         </div>
       </section>
     </>

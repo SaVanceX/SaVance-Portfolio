@@ -10,7 +10,7 @@ export function Navigation() {
         <div className='img-container'>
           <img src='/images/profile.jpeg' alt='' />
         </div>
-        <p>SaVance Ford</p>
+        <p>SaVance X</p>
       </div>
       <ul className='desktop-nav'>
         <li>

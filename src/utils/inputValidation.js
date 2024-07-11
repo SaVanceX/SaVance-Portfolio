@@ -7,7 +7,7 @@
 *-------------------------------------------------------------------*/
 
 export const name_validation = {
-  name: 'name',
+  name: 'from_name',
   label: 'name',
   type: 'text',
   id: 'name',
@@ -25,7 +25,7 @@ export const name_validation = {
 };
 
 export const desc_validation = {
-  name: 'description',
+  name: 'message',
   label: 'description',
   multiline: true,
   id: 'description',
@@ -43,7 +43,7 @@ export const desc_validation = {
 };
 
 export const email_validation = {
-  name: 'email',
+  name: 'user_email',
   label: 'email address',
   type: 'email',
   id: 'email',

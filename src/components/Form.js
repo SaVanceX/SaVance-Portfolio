@@ -2,7 +2,6 @@ import { Input } from './Input';
 import emailjs from '@emailjs/browser';
 import { useForm, FormProvider } from 'react-hook-form';
 import { useState, useRef } from 'react';
-import { BsFillCheckSquareFill } from 'react-icons/bs';
 import {
   desc_validation,
   name_validation,
@@ -16,11 +15,6 @@ export const Form = () => {
   const [stateMessage, setStateMessage] = useState(null);
 
   const onSubmit = methods.handleSubmit((e) => {
-    const templateParams = {
-      from_name: e.name,
-      from_email: e.email,
-      message: e.description,
-    };
     console.log(e);
     setIsSubmitting(true);
     emailjs

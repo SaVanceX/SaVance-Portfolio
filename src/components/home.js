@@ -1,4 +1,5 @@
 import { Contact } from './contact';
+import Ticker from './ticker';
 import { Skill } from './skill';
 import { useEffect } from 'react';
 
@@ -29,6 +30,8 @@ export function Home() {
           <p>I love to learn, Code and create Digital Art!</p>
         </div>
       </section>
+
+      <Ticker />
 
       <section id='about'>
         <div className='about-container'>
